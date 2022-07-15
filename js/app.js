@@ -36,8 +36,10 @@ newManAnswer = newManAnswer.toLowerCase();
 console.log(newManAnswer);
 
 // tried to word things differently with the 'not equal' to sign
-if (newManAnswer !== 'no' || newManAnswer !== 'n'){
+if (newManAnswer === 'yes' || newManAnswer !== 'y'){
   alert('You must be Newman');
+} else if (newManAnswer ==='no' || newManAnswer ==='n'){
+  alert ('youre right, i hate him');
 }
 
 let foodAnswer = prompt('Are you hungry ?');
@@ -47,6 +49,6 @@ console.log(foodAnswer);
 // experimenting with a catch all.
 if (foodAnswer === 'yes' || foodAnswer === 'y'){
   alert('make sure you eat some food!');
-} else {
+} else if (foodAnswer === 'no'|| foodAnswer === 'n') {
   alert ('Its okay, just make sure youre drinking water');
 }
