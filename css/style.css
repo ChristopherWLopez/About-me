@@ -39,8 +39,9 @@ p
 
 }
 
-li{
-    font-size: 24px;
+li
+{
+    font-size: 25px;
     margin: 22px;
     
 }
@@ -63,5 +64,5 @@ a:hover
 }
 section
 {
-    background-color: rgb(209, 204, 204);
+    background-color:  rgb(182, 166, 166);
 }
