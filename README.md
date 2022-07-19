@@ -1,2 +1,3 @@
 # About-me
-About me project class 2
+
+This is A small "About me" Structred in HTML and Styled in CSS I applied a few prompts via JS.

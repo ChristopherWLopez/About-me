@@ -7,6 +7,9 @@ header
 {
     border: solid #0d0d6b 2px;
     background-color: rgb(72, 121, 171);
+
+
+    
 }
 h1
 {
@@ -14,7 +17,7 @@ h1
     text-align: center;
     color: rgb(124, 164, 187);
     font-size:  60px;
-    font-style: fantasy;
+    margin: 2px;
 }
 .bio
 {
@@ -31,13 +34,22 @@ p
     color: rgb(1, 0, 0);
     font-size: 3rem;
     border: 20px;
+    display: block;
+    /* display: inline-block; */
 
 }
 
 li{
     font-size: 24px;
     margin: 22px;
+    
+    
 
+
+}
+footer
+{
+    text-align: center;
 
 }
 .icon
@@ -46,6 +58,11 @@ li{
     margin: 4px;
     text-align: center;
     padding: 20px;
+}
+a:hover
+{
+    background-color: rgba(122, 22, 107, 0.212);
+
 }
 section
 {
