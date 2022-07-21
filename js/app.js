@@ -3,64 +3,74 @@
 
 let count = 0;
 
-let userAnswer = prompt('Do I Like "horror" films?');
-userAnswer = userAnswer.toLowerCase();
-console.log(userAnswer);
-
-if (userAnswer === 'yes' || userAnswer === 'y'){
-  alert('You Nailed it! I love horror films');
-  // eslint-disable-next-line no-unused-vars
-  count++;
-} else if (userAnswer === 'no' || userAnswer ==='n'){
-  alert('well i dont like Rom Coms');
+function getAnswer (message, correct1, correct2) {
+  let answer = prompt(message).toLowerCase();
+  if (answer === correct1 || answer === correct2) {
+    alert('You nailed it!');
+    count++
+    return;
+  } 
+  alert('That\'s not correct');
 }
+getAnswer ('Do I like "horror" films?', 'y', 'yes');
+getAnswer ('Do I like any hiphop?', 'y', 'yes');
+getAnswer ('Do I love white guitars?', 'y', 'yes');
+getAnswer ('Do I love Newman?', 'n', 'no');
+getAnswer ('Are you hungry?', 'y', 'yes');
 
-let musicAnswer = prompt('Do I like any hiphop?');
-musicAnswer = musicAnswer.toLowerCase();
-console.log(musicAnswer);
 
-if (musicAnswer === 'yes' || musicAnswer === 'y'){
-  alert('Well... well... well... You can read! I know how!.. or do I... ?');
-  count++;
-// eslint-disable-next-line no-dupe-else-if
-} else if (musicAnswer === 'no' || musicAnswer === 'n'){
-  alert('I absolutely love hip-hop');
-}
+//   // eslint-disable-next-line no-unused-vars
+//   count++;
+// } else if (userAnswer === 'no' || userAnswer ==='n'){
+//   alert('well i dont like Rom Coms');
+// }
 
-let guitarAnswer = prompt('Do I love white guitars?');
-guitarAnswer = guitarAnswer.toLowerCase();
-console.log(guitarAnswer);
+// let musicAnswer = prompt();
+// musicAnswer = musicAnswer.toLowerCase();
+// console.log(musicAnswer);
 
-if (guitarAnswer === 'yes' || guitarAnswer === 'y'){
-  alert('I LOVE  White Guitars!');
-  count++
-} else if (guitarAnswer === 'no' || guitarAnswer === 'n'){
-  alert ('Youre not wrong but youre not right!');
-}
+// if (musicAnswer === 'yes' || musicAnswer === 'y'){
+//   alert('Well... well... well... You can read! I know how!.. or do I... ?');
+//   count++;
+// // eslint-disable-next-line no-dupe-else-if
+// } else if (musicAnswer === 'no' || musicAnswer === 'n'){
+//   alert('I absolutely love hip-hop');
+// }
 
-let newManAnswer = prompt('Do I love Newman?');
-newManAnswer = newManAnswer.toLowerCase();
-console.log(newManAnswer);
+// let guitarAnswer = prompt('Do I love white guitars?');
+// guitarAnswer = guitarAnswer.toLowerCase();
+// console.log(guitarAnswer);
 
-// tried to word things differently with the 'not equal' to sign
-if (newManAnswer === 'yes' || newManAnswer === 'y'){
-  alert('You must be Newman');
-} else if (newManAnswer ==='no' || newManAnswer ==='n'){
-  alert ('youre right, i hate him');
-  count++
-}
+// if (guitarAnswer === 'yes' || guitarAnswer === 'y'){
+//   alert('I LOVE  White Guitars!');
+//   count++
+// } else if (guitarAnswer === 'no' || guitarAnswer === 'n'){
+//   alert ('Youre not wrong but youre not right!');
+// }
 
-let foodAnswer = prompt('Are you hungry ?');
-foodAnswer = foodAnswer.toLowerCase();
-console.log(foodAnswer);
+// let newManAnswer = prompt('Do I love Newman?');
+// newManAnswer = newManAnswer.toLowerCase();
+// console.log(newManAnswer);
 
-// experimenting with a catch all.
-if (foodAnswer === 'yes' || foodAnswer === 'y'){
-  alert('make sure you eat some food!');
-  count++
-} else if (foodAnswer === 'no'|| foodAnswer === 'n') {
-  alert ('Its okay, just make sure youre drinking water');
-}
+// // tried to word things differently with the 'not equal' to sign
+// if (newManAnswer === 'yes' || newManAnswer === 'y'){
+//   alert('You must be Newman');
+// } else if (newManAnswer ==='no' || newManAnswer ==='n'){
+//   alert ('youre right, i hate him');
+//   count++
+// }
+
+// let foodAnswer = prompt('Are you hungry ?');
+// foodAnswer = foodAnswer.toLowerCase();
+// console.log(foodAnswer);
+
+// // experimenting with a catch all.
+// if (foodAnswer === 'yes' || foodAnswer === 'y'){
+//   alert('make sure you eat some food!');
+//   count++
+// } else if (foodAnswer === 'no'|| foodAnswer === 'n') {
+//   alert ('Its okay, just make sure youre drinking water');
+// }
 
 
 function guessingGame(){
@@ -88,18 +98,15 @@ guessingGame();
 function guitarPedals(){
   let rightPedalsAnswer = ['chorus','phaser','fuzz'];
   for (let i=0; i<5; i++){
-    let userAnswer = prompt('Which of these pedals are always on my pedal board? (chorus, delay, phaser,rainbow machine, fuzz )');
-    // for loop itterating right pedal answer same var as 78
-    if (userAnswer === rightPedalsAnswer[1]){
-      prompt('Nailed it!');
-      count++
-      break;
-    }else if (userAnswer === rightPedalsAnswer[0]) {
-      ('I love it but not my only one.');
-    } else if (userAnswer === rightPedalsAnswer[2]){
-      ('awesome but not essential');
+    let userAnswer = prompt('Which of these pedals are always on my pedal board? (chorus, delay, phaser, rainbow machine, fuzz )');
+    for (let j=0; j<rightPedalsAnswer.length; j++) {
+      if (userAnswer === rightPedalsAnswer[j]){
+        alert('Nailed it!');
+        count++;
+        return; 
+      }
     }
-
+    alert('I love it but not my only one.');
   }
 }
 guitarPedals();
