@@ -19,7 +19,7 @@ getAnswer ('Do I love Newman?', 'n', 'no');
 getAnswer ('Are you hungry?', 'y', 'yes');
 
 
-//   // eslint-disable-next-line no-unused-vars
+
 
 
 
