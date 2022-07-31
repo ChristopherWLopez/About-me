@@ -29,7 +29,7 @@ function guessingGame(){
     let userAnswer = prompt('Guess my favorite number');
     if (userAnswer == correctAnswer){
       alert('well played');
-      count++
+      count++;
       break;
     }else if (i >= 3){
       alert('all out of tries');
@@ -39,7 +39,7 @@ function guessingGame(){
 
     } else if (userAnswer > correctAnswer){
       alert('too high');
-      console.log(userAnswer);
+
     }
   }
 }
