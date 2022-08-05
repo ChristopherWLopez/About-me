@@ -1,7 +1,10 @@
 'use strict';
 
-let user = prompt('What is your name?');
-alert('Welcome ' + user);
+function getName() {
+  let user = prompt('What is your name?');
+  alert('Welcome ' + user);
+}
+getName();
 
 let count = 0;
 
